@@ -10,6 +10,10 @@ valid_put_body = {
     "name": "morpheus",
     "job": "zion resident"
 }
+valid_patch_body = {
+    "name": "morpheus",
+    "job": "zion resident"
+}
 
 invalid_username = ""
 invalid_email = "sydney@fife"

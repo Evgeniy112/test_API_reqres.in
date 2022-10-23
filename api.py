@@ -78,32 +78,62 @@ class RegRequest:
             result = res.text
         return status, result
 
-    # def put_api_users_id(self, body):
-    #     #user_id = {"id": user_id}
-    #     res = requests.put(self.base_url + "users", json=body)
-    #     status = res.status_code
-    #     try:
-    #         result = res.json()
-    #     except:
-    #         result = res.text
-    #     return status, result
+    def put_api_users_id(self, user_id, body):
+        user_id = {"id": user_id}
+        res = requests.put(self.base_url + "users/", params=user_id, json=body)
+        status = res.status_code
+        try:
+            result = res.json()
+        except:
+            result = res.text
+        return status, result
 
-    # def put_api_resource_id(self):
-    #     res = requests.put(self.base_url + "/users")
-    #     status = res.status_code
-    #
-    # def patch_api_users_id(self):
-    #     res = requests.patch(self.base_url + "/users")
-    #     status = res.status_code
-    #
-    # def patch_api_resource_id(self):
-    #     res = requests.patch(self.base_url + "/users")
-    #     status = res.status_code
-    #
-    # def delete_api_users_id(self):
-    #     res = requests.delete(self.base_url + "/users")
-    #     status = res.status_code
-    #
-    # def delete_api_resource_id(self):
-    #     res = requests.delete(self.base_url + "/users")
-    #     status = res.status_code
+    def put_api_resource_id(self, user_id, body):
+        user_id = {"id": user_id}
+        res = requests.put(self.base_url + "resource/", params=user_id, json=body)
+        status = res.status_code
+        try:
+            result = res.json()
+        except:
+            result = res.text
+        return status, result
+
+    def patch_api_users_id(self, user_id, body):
+        user_id = {"id": user_id}
+        res = requests.patch(self.base_url + "users/", params=user_id, json=body)
+        status = res.status_code
+        try:
+            result = res.json()
+        except:
+            result = res.text
+        return status, result
+
+    def patch_api_resource_id(self, user_id, body):
+        user_id = {"id": user_id}
+        res = requests.patch(self.base_url + "resource/", params=user_id, json=body)
+        status = res.status_code
+        try:
+            result = res.json()
+        except:
+            result = res.text
+        return status, result
+
+    def delete_api_users_id(self, user_id):
+        user_id = {"id": user_id}
+        res = requests.delete(self.base_url + "users/", params=user_id)
+        status = res.status_code
+        try:
+            result = res.json()
+        except:
+            result = res.text
+        return status, result
+
+    def delete_api_resource_id(self, resource_id):
+        resource_id = {"id": resource_id}
+        res = requests.delete(self.base_url + "resource/", params=resource_id)
+        status = res.status_code
+        try:
+            result = res.json()
+        except:
+            result = res.text
+        return status, result
